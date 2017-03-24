@@ -13,8 +13,15 @@ class ViewController: UIViewController {
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let bannerView = DVBannerView()
-        bannerView.createBannerView()
+        
+        var listArray = [String]()
+        for i in 1...6 {
+            let imgString = String(format:"videoScreenshot0%d",i)
+            listArray.append(imgString)
+        }
+        let bannerView = DVBannerView.init(photoArray:listArray)
+        
+        
         self.view.addSubview(bannerView)
         
     }
